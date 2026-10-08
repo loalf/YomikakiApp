@@ -1,0 +1,118 @@
+/* Yomikaki's web pages: the app's tokens (design/tokens.json) on paper. */
+
+:root {
+  color-scheme: light dark;
+  --paper: #f7f2e8;
+  --paper-raised: #fffcf6;
+  --ink: #1f1a15;
+  --ink-muted: #655d53;
+  --ai: #2e4b7c;
+  --shadow-card: 0 1px 2px rgba(31, 26, 21, 0.06), 0 6px 16px rgba(31, 26, 21, 0.06);
+  --radius-paper: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #17140f;
+    --paper-raised: #221e18;
+    --ink: #f2ebdf;
+    --ink-muted: #a99f91;
+    --ai: #93aedb;
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+header img {
+  width: 280px;
+  height: auto;
+}
+
+.tagline {
+  color: var(--ink-muted);
+  margin: 8px 0 0;
+}
+
+/* A sheet of paper on the washi ground: square corner, shadow, no outline. */
+.sheet {
+  background: var(--paper-raised);
+  border-radius: var(--radius-paper);
+  box-shadow: var(--shadow-card);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 4px;
+}
+
+h2 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+h3 {
+  font-size: 17px;
+  margin: 16px 0 4px;
+}
+
+p,
+ul {
+  margin: 0 0 12px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.sheet > :first-child {
+  margin-top: 0;
+}
+
+.sheet > :last-child {
+  margin-bottom: 0;
+}
+
+.muted {
+  color: var(--ink-muted);
+}
+
+a {
+  color: var(--ai);
+}
+
+footer {
+  color: var(--ink-muted);
+  font-size: 13px;
+  text-align: center;
+}
